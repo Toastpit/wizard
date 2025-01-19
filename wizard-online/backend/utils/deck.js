@@ -14,8 +14,7 @@ function createDeck() {
       });
     });
   
-    // Füge zusätzliche Wizard- und Jester-Karten hinzu, falls nötig
-    // ...
+    // Wizard und Jester-Karten bereits enthalten, falls erforderlich weitere hinzufügen
   
     // Mische das Deck
     deck = shuffle(deck);
@@ -42,8 +41,8 @@ function createDeck() {
   }
   
   function determineCardsPerPlayer(round, numberOfPlayers) {
-    // Beispiel: In Runde 1 wird 1 Karte pro Spieler ausgeteilt, Runde 2: 2 Karten, etc.
-    return round + 1; // Kann angepasst werden
+    // In Wizard beginnt man mit 1 Karte und erhöht pro Runde
+    return round; // Runde 1: 1 Karte, Runde 2: 2 Karten, etc.
   }
   
   module.exports = { createDeck, dealCards, determineCardsPerPlayer };
